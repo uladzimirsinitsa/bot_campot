@@ -13,5 +13,3 @@ redis_db = redis.Redis(
     username='lyddit',
     password='e4tlg779=ckfKdf5ddjPP'
 )
-
-print(redis_db.get('https://novayagazeta.ru'))

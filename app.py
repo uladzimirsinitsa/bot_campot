@@ -9,6 +9,7 @@ from flask import request as flask_request
 from dotenv import load_dotenv
 
 from .parsers import parser_meduza as pm
+from .parsers import parser_novayagazeta as ng
 
 load_dotenv()
 
@@ -32,14 +33,13 @@ def parsing_get_request(request) -> tuple:
 
 
 def parsing_get_message(message: str, LIST_COMMANDS: list) -> list:
-    data = []
     if'/mdz' in message:
         return pm.get_data_meduza()
-    if '/start' in message:
-        return LIST_COMMANDS
     elif '/ng' in message:
-        return data
-    return data
+        return ng.get_data_ng()
+    else:
+        return LIST_COMMANDS
+
 
 
 def send_message(chat_id: int, text: str = ' ') -> dict:

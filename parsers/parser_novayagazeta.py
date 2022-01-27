@@ -9,7 +9,7 @@ import time
 from bs4 import BeautifulSoup
 
 sys.path.append('.')
-from settings.config import redis_db
+from config import redis_db
 
 
 URL = 'https://novayagazeta.ru/'
