@@ -6,7 +6,7 @@ __pycache__/
 settings/config.py
 settings
 
-# C extensions
+# C extensions 
 *.so
 
 # Distribution / packaging
