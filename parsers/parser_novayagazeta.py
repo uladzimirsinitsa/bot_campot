@@ -13,6 +13,7 @@ from settings.config import redis_db
 
 URL = 'https://novayagazeta.ru/'
 
+
 def parser_object() -> list:
     response = requests.get(f'{URL}feed/rss').text
     urls = BeautifulSoup(response, 'xml').find_all('link')
